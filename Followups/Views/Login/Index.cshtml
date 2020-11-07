@@ -1,0 +1,117 @@
+﻿@model Followups.Models.UserViewModel
+
+@{
+    Layout = null;
+}
+ <!DOCTYPE html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+        <meta name="" content="" />
+        <!-- Add the following three tags inside head. -->
+        <link href="../css/StyleLogin.css" rel="stylesheet" />
+        <link href="~/css/StyleLogin.css" rel="stylesheet" />
+        <style type="text/css">
+            body, input {
+                font-family: Calibri, Arial;
+            }
+        </style>
+        <script type="text/javascript">
+            window.history.forward();
+            function noBack() {
+                window.history.forward();
+            }
+        </script>
+    </head>
+
+    <body style="background-color:#3199e5" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+        <div id="wrapper">
+
+            @using (Html.BeginForm("index", "Login", FormMethod.Post, new { @id = "form1" }))
+            {
+
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                @if (@ViewBag.Message != null)
+                {
+                    <div style="border: 1px solid red">
+                        @ViewBag.Message
+                    </div>
+                }
+                <div class="login-form">
+
+
+                    <div class="header">
+
+                        @*<div style="width: 100%; float: left;">
+                            <Label ID="Lblmsg" Text=""></Label>
+                        </div>*@
+                        <div style="width: 100%; float: left;">
+                            <img ID="Image1" src="~/images/logo" Height="105px" Width="100%" />
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        @Html.DropDownListFor(m => m.type,
+                     new SelectList(Enum.GetValues(typeof(Followups.Models.Type))),
+                     "Select User", new { @class = "input password" })
+                        <br /><br />
+
+
+                        @Html.LabelFor(a => a.username)
+                        @Html.TextBoxFor(a => a.username, new { @class = "input username" })
+                        <div class="user-icon"></div>
+                        @Html.ValidationMessageFor(a => a.username)
+
+
+
+                        @Html.LabelFor(a => a.password)
+
+
+                        @Html.PasswordFor(a => a.password, new { @class = "input password" })
+
+                        <div class="pass-icon"></div>
+
+                        @Html.ValidationMessageFor(a => a.password)
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="footer">
+                        <div style="width: 40%; float: left">
+                            <input id="login" type="submit" class="button" value="Login" />
+
+                        </div>
+                        <div style="width: 40%; float: left; margin-left: 30px;">
+                        </div>
+                        <div style="width: 100%; float: left; padding-top: 10px; text-decoration: none">
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="gradient">
+                </div>
+            }
+        </div>
+        @if (ViewBag.Message != null)
+        {
+            <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+            };
+            </script>
+        }
+    </body>
+</html>
+
