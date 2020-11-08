@@ -18,6 +18,8 @@ namespace Followups.Models.DB
         public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<User> User { get; set; }
 
+        public DbQuery<UserViewModel> Users { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

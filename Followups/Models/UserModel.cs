@@ -11,3 +11,4 @@ namespace Followups.Models
         public EmployeeViewModel Employee { get; set; }
     }
 }
+
