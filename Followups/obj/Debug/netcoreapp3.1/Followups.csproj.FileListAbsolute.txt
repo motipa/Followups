@@ -153,6 +153,5 @@ C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups
 C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.pdb
 C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.genruntimeconfig.cache
 C:\Users\User\source\repos\Followups\Followups\bin\Debug\netcoreapp3.1\Followups.Views.pdb
-C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.Views.pdb
+C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.csprojAssemblyReference.cache

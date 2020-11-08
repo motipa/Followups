@@ -34,6 +34,13 @@ namespace Followups.Controllers
             ViewBag.Title = "User";
             return View();
         }
+
+        public IActionResult AddUser()
+        {
+            ViewBag.Name = HttpContext.Session.GetString(SessionName);
+            ViewBag.Title = "User";
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
