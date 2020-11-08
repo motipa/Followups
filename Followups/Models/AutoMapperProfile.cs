@@ -12,6 +12,7 @@ namespace Followups.Models
         public AutoMapperProfile()
         {
             CreateMap<UserViewModel, User>();
+            CreateMap<EmployeeViewModel, Employee>();
         }
     }
 }

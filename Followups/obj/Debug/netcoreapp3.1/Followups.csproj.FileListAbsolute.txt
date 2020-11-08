@@ -155,3 +155,8 @@ C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups
 C:\Users\User\source\repos\Followups\Followups\bin\Debug\netcoreapp3.1\Followups.Views.pdb
 C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.Views.pdb
 C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Followups\Followups\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\User\source\repos\Followups\Followups\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Followups.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\Followups\Followups\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddUser.cshtml.g.cs

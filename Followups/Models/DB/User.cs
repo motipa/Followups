@@ -13,5 +13,6 @@ namespace Followups.Models.DB
         public DateTime? ModifiedDate { get; set; }
         public bool? IsActive { get; set; }
         public bool? IsDelete { get; set; }
+        public int? Empid { get; set; }
     }
 }

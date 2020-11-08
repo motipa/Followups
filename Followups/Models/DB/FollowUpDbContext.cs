@@ -15,11 +15,44 @@ namespace Followups.Models.DB
         {
         }
 
+        public virtual DbSet<Employee> Employee { get; set; }
         public virtual DbSet<User> User { get; set; }
 
-     
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=.\\sqlexpress;Database=FollowUpDb;Trusted_Connection=True;");
+            }
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Employee>(entity =>
+            {
+                entity.Property(e => e.Department)
+                    .HasColumnName("department")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Designation)
+                    .HasColumnName("designation")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Email)
+                    .HasColumnName("email")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Name)
+                    .HasColumnName("name")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Phone)
+                    .HasColumnName("phone")
+                    .HasMaxLength(10)
+                    .IsFixedLength();
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.Property(e => e.CreatedDate)
