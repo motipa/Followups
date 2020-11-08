@@ -1,0 +1,3 @@
+﻿CREATE VIEW [Users] AS
+SELECT *
+FROM [User]
